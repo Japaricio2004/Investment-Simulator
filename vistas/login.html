@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/estilos/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        /* Estilo para el botón de cerrar sesión */
+       
         .btn-logout {
             background: linear-gradient(45deg, #22c55e, #16a34a);
             border: none;
@@ -89,7 +89,7 @@
                 🔄 Reiniciar
             </button>
             
-            <!-- Botón de cerrar sesión -->
+            
             <button class="btn-logout" id="logoutBtn">Cerrar Sesión</button>
         </div>
         <div class="visualization-area">
@@ -128,7 +128,7 @@
     <script src="/functionalities/script.js"></script>
     
     <script>
-        // Solo el código para cerrar sesión
+        
         document.getElementById('logoutBtn').addEventListener('click', function() {
             localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('username');
