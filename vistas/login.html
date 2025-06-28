@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="/images/investment.jpg">
+    <title>Simulador de Inversiones</title>
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        /* Estilo para el botón de cerrar sesión */
+        .btn-logout {
+            background: linear-gradient(45deg, #22c55e, #16a34a);
+            border: none;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+        
+        .btn-logout:hover {
+            background: linear-gradient(45deg, #16a34a, #15803d);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="control-panel">
+            <div class="title">Investment Simulator 3D</div>
+            
+            <div class="section">
+                <h3>Parámetros de Inversión</h3>
+                <div class="input-group">
+                    <label>Capital Inicial ($)</label>
+                    <input type="number" id="initialCapital" value="10000" min="1000" max="1000000">
+                </div>
+                <div class="input-group">
+                    <label>Período (años)</label>
+                    <input type="number" id="period" value="5" min="1" max="30">
+                </div>
+                <div class="input-group">
+                    <label>Aporte Mensual ($)</label>
+                    <input type="number" id="monthlyContribution" value="500" min="0" max="10000">
+                </div>
+                <div class="input-group">
+                    <label>Tolerancia al Riesgo</label>
+                    <select id="riskTolerance">
+                        <option value="conservative">Conservador (2-4%)</option>
+                        <option value="moderate" selected>Moderado (5-8%)</option>
+                        <option value="aggressive">Agresivo (9-15%)</option>
+                        <option value="speculative">Especulativo (15-30%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Estrategias de Inversión</h3>
+                <div class="strategy-card active" data-strategy="balanced">
+                    <strong>Balanceada</strong><br>
+                    <small>60% Acciones, 40% Bonos</small>
+                </div>
+                <div class="strategy-card" data-strategy="growth">
+                    <strong>Crecimiento</strong><br>
+                    <small>80% Acciones, 20% Bonos</small>
+                </div>
+                <div class="strategy-card" data-strategy="income">
+                    <strong>Renta Fija</strong><br>
+                    <small>30% Acciones, 70% Bonos</small>
+                </div>
+                <div class="strategy-card" data-strategy="crypto">
+                    <strong>Criptomonedas</strong><br>
+                    <small>50% Crypto, 30% Tech, 20% Bonos</small>
+                </div>
+                <div class="strategy-card" data-strategy="tech">
+                    <strong>Tecnología</strong><br>
+                    <small>70% Tech, 20% Growth, 10% Bonos</small>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="runSimulation()">
+                🚀 Simular Inversión
+            </button>
+            <button class="btn btn-secondary" onclick="resetSimulation()">
+                🔄 Reiniciar
+            </button>
+            
+            <!-- Botón de cerrar sesión -->
+            <button class="btn-logout" id="logoutBtn">Cerrar Sesión</button>
+        </div>
+        <div class="visualization-area">
+            <div id="canvas-container"></div>
+            <div class="stats-overlay">
+                <div class="stat-item">
+                    <span>Capital Final:</span>
+                    <span class="stat-value" id="finalCapital">$0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Ganancia Total:</span>
+                    <span class="stat-value" id="totalGain">$0</span>
+                </div>
+                <div class="stat-item">
+                    <span>ROI:</span>
+                    <span class="stat-value" id="roi">0%</span>
+                </div>
+                <div class="stat-item">
+                    <span>Retorno Anual:</span>
+                    <span class="stat-value" id="annualReturn">0%</span>
+                </div>
+                <div class="stat-item">
+                    <span>Volatilidad:</span>
+                    <span class="stat-value" id="volatility">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">Investment Simulator</div>
+            <div class="footer-copyright">© 2025 Investment Simulator. Todos los derechos reservados.</div>
+            <div class="footer-creator">Desarrollado por <span>Jorge Aparicio</span></div>
+        </div>
+    </footer>
+    <script src="/functionalities/script.js"></script>
+    
+    <script>
+        // Solo el código para cerrar sesión
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('username');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
