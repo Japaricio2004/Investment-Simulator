@@ -1,4 +1,5 @@
 # 💹 Investment Simulator
+> 🚧 Proyecto en constante mejora — completamente funcional en su versión actual.
 
 Un simulador interactivo que permite visualizar cómo crece una inversión a lo largo del tiempo mediante una interfaz gráfica moderna, educativa e intuitiva.
 
@@ -36,4 +37,3 @@ Un simulador interactivo que permite visualizar cómo crece una inversión a lo 
 - Demostrativo: útil para mostrar escenarios personalizados en clases, talleres o consultorías financieras.
 - Comercial: adaptable como herramienta de ventas o parte de una landing page para empresas del sector financiero o fintech
 
-## EN CONSTANTE ACTUALIZACION PERO ES FUNCIONAL---
