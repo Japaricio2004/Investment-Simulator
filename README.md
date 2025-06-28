@@ -35,3 +35,5 @@ Un simulador interactivo que permite visualizar cómo crece una inversión a lo 
 - Educativo para enseñar visualmente cómo funciona el interés compuesto y la inversión a largo plazo.
 - Demostrativo: útil para mostrar escenarios personalizados en clases, talleres o consultorías financieras.
 - Comercial: adaptable como herramienta de ventas o parte de una landing page para empresas del sector financiero o fintech
+
+## EN CONSTANTE ACTUALIZACION PERO ES FUNCIONAL---
