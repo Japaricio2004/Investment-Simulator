@@ -3,7 +3,7 @@
 Un simulador interactivo que permite visualizar cómo crece una inversión a lo largo del tiempo mediante una interfaz gráfica moderna, educativa e intuitiva.
 
 🔗 **Accede a la demo en vivo:**  
-👉 [https://investmentsimulatorr.netlify.app/index.html](https://investmentsimulatorr.netlify.app/)
+👉 [https://investmentsimulatorr.netlify.app/](https://investmentsimulatorr.netlify.app/)
 
 ---
 
